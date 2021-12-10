@@ -1,6 +1,6 @@
 import random
 
-
+#
 # l1 = []
 # l2 = []
 # n = int(input("Введите количество значений в списке: "))
@@ -12,11 +12,12 @@ import random
 # for i in l1:
 #     if l2.count(i) == 0:
 #         l2.append(i)
-# print(l2)
-#
+# l1 = l2
+# print(l1)
+
 # l3 = list(set(l1))
 # print(l3)
-
+#
 
 # l1 = []
 # l2 = []
