@@ -60,8 +60,51 @@ sub_str = my_str[first+1: last]
 print(sub_str)
 
 
-# Задание 8
-my_str = "abcd"
-my_list = list()
-resault = my_str[::2]
-print(resault)
+#Задание 8
+my_str = "qwert"
+res_list = list()
+if len(my_str) % 2:
+    my_str = my_str + "_"
+for idx in range(0, len(my_str), 2):
+    res_list.append(my_str[idx: idx +2])
+print(res_list)
+
+
+#Задание 9
+my_list = [2, 4, 1, 5, 3, 9, 0, 7]
+result = 0
+for idx in range(1, len(my_list)-1):
+    if my_list[idx] > my_list[idx-1] + my_list[idx+1]:
+        result += 1
+print(result)
+
+
+#Задание 10
+persons = [{"name": "John", "age": 15},
+           {"name": "Anna", "age": 23},
+           {"name": "Dan", "age": 5},
+           {"name": "Maximusss", "age": 24},
+           {"name": "Olgha", "age": 25},
+           {"name": "Volodymyr", "age": 5},
+           {"name": "Jack", "age": 45}]
+age = list()
+name = list()
+
+min_ages = list()
+max_len_names = list()
+for item in persons:
+    age.append(item["age"])
+    name.append(item["name"])
+min_age = min(age)
+max_name = max(name)
+
+for chosen_persons in persons:
+    if len(chosen_persons["name"]) == len(max_name):
+        max_len_names.append(chosen_persons["name"])
+    if chosen_persons["age"] == min_age:
+        min_ages.append(chosen_persons["age"])
+
+mean_age = int(sum(age) / len(age))
+print(min_ages)
+print(max_len_names)
+print(mean_age)
